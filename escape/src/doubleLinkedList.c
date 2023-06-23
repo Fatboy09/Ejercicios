@@ -44,7 +44,7 @@ nodo* crear_nodo(type_data e) {
 }
 
 /***
- * @brief Inserta un elemento nuevo en la lista
+ * @brief Inserta un elemento nuevo al final de la lista
  * @param lst puntero doble de tipo nodo que representa a la DE lista
  * @param value representa el valor que se almacenara en la lista
  ***/
