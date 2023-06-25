@@ -1,12 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "../headers/Image.h"
 #include "../headers/ImageOperations.h"
 
-int main() {
+int main(int argc, char *argv[]) {
 	
-	const char* path_file = "./src/resources/tiger.bmp";
-	//const char* path_file = "./src/resources/penguin.bmp";
-	const char* path_file_Gray = "./src/resources/tiger_gray.bmp";
+	if(argc != 3) {
+		fprintf(stderr, "Error, inputs arguments must be 3\n");
+		exit(EXIT_FAILURE);
+	}
+	
+	const char* path_file = argv[1];
+	const char* path_file_Gray = argv[2];
 	bmpInfoHeader infoHeader;
 	bmpFileHeader fileHeader;
 	unsigned char* image_RGB = open_bmp(path_file, &infoHeader, &fileHeader);
